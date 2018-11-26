@@ -16,4 +16,87 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+  <script type="text/javascript">
+    var browser = getBrowserInfo() ;//浏览器信息
+    //alert(browser);//IE 11.0
+    //IE11以下： MSIE 10.0、MSIE9.0等
+    //chrome：chrome/41.0.2272.89 [返回的是个数组] 
+    //firefox: firefox/42.0 [返回的是个数组] 
+    var verinfo = (browser+"").replace(/[^0-9.]/ig,""); //浏览器版本
+    //alert(verinfo);//11.0
+    //IE浏览器: 11.0/10.0/9.0
+    //chrome浏览器：41.0.2272.89
+    //Firefox浏览器： 42.0
+    function getBrowserInfo(){
+        var agent = navigator.userAgent.toLowerCase() ;
+        //console.log(agent);
+        //agent chrome : mozilla/5.0 (windows nt 6.1; wow64) applewebkit/537.36 (khtml, like gecko) chrome/41.0.2272.89 safari/537.36
+        //agent firefox : mozilla/5.0 (windows nt 6.1; wow64; rv:42.0) gecko/20100101 firefox/42.0
+        //agent  IE11: mozilla/5.0 (windows nt 6.1; wow64; trident/7.0; slcc2; .net clr 2.0.50727; .net clr 3.5.30729; 
+        //接上.net clr 3.0.30729; media center pc 6.0;infopath.2; .net4.0c; .net4.0e; rv:11.0) like gecko 
+        // (可以看出IE11中不包括MSIE字段)
+        //agent  IE10:   mozilla/5.0(compatible; msie 10.0; windows nt 6.1; wow64; trident/6.0)
+        var regStr_ie = /msie [\d.]+;/gi ;
+        var regStr_ff = /firefox\/[\d.]+/gi;
+        var regStr_chrome = /chrome\/[\d.]+/gi;
+        var regStr_saf = /safari\/[\d.]+/gi;
+        var regStr_opera = /opera\/[\d.]+/gi;
+        //IE11以下
+        if(agent.indexOf("msie") > 0)
+        {
+            return agent.match(regStr_ie) ;
+        }
+        //IE11版本中不包括MSIE字段
+        if(agent.indexOf("trident") > 0&&agent.indexOf("rv") > 0){
+            return "IE " + agent.match(/rv:(\d+\.\d+)/) [1];
+        }
+        //firefox
+        if(agent.indexOf("firefox") > 0)
+        {
+            return agent.match(regStr_ff) ;
+        }
+        //Chrome
+        if(agent.indexOf("chrome") > 0)
+        {
+            return agent.match(regStr_chrome) ;
+        }
+        //Safari
+        if(agent.indexOf("safari") > 0 && agent.indexOf("chrome") < 0)
+        {
+            return agent.match(regStr_saf) ;
+        }
+         //opera
+        if(agent.indexOf("opera") > 0)
+        {
+            return agent.match(regStr_opera) ;
+        }
+   }
+   let userName ='';
+   if(Array.isArray(browser)){
+     userName = browser[0].split('/')[0];
+   }else{
+    userName = browser.split('/')[0];
+   }
+   console.log(userName,verinfo,"浏览器版本");
+   if(userName==="ie" && verinfo < "10"){
+     console.log("ie");
+     dialog()
+   }else if(userName === 'firefox' && verinfo <"21"){
+    console.log("firefox");
+    dialog()
+   }else if(userName === 'chrome' && verinfo <"35"){
+    console.log("chrome");
+    dialog()
+   }else if(userName ==='safari' && verinfo <"9"){
+    console.log("safari");
+    dialog()
+   }else if(userName ==='opera' && verinfo <"15"){
+    console.log("opera");
+    dialog()
+   }
+  
+   function dialog(){
+    document.write("<div style='position:fixed;top:0;left:0;right:0;bottom:0;z-index:100;width:100%;height:100%;padding-top:200px;background-color:#fff';><P style='font-size:30px;text-align:center;padding:0 100px;color:#EF6C00;'>对不起您的浏览器版本过低，浏览器不兼容，请下载最新谷歌浏览器！<br/><br/><span style='font-size:18px;margin-top:50px;color:blue;'>谷歌浏览器推荐下载地址:<br/><a  style='color:#343434;text-decoration:underline;color:blue' href='https://sm.myapp.com/original/Browser/68.0.3440.84_chrome_installer_x64.exe'>https://sm.myapp.com/original/Browser/68.0.3440.84_chrome_installer_x64.exe</ a></span></P></div>")
+   }
+    </script>
 </html>

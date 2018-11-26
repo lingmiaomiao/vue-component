@@ -2,18 +2,16 @@
 <div class="home">
   <!-- header -->
   <el-header>
-     <topMenuCom/>
+     <topMenuCom style="height:60px"/>
   </el-header>
   <!-- aside -->
-  <el-aside class="fl" style="height:100%;width:14%">
+  <el-aside class="fl" style="height:calc(100% - 60px);width:14%">
       <leftMenuCom/>
   </el-aside>
   <!-- main -->
-  <el-main class="fl" style="height:100%;width:86%">
+  <el-main class="fl" style="height:calc(100% - 60px);width:86%">
       <router-view/>
   </el-main>
-  
-   
 </div>
 </template>
 
