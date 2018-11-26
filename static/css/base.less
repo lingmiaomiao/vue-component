@@ -1,0 +1,57 @@
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix:after{clear:both;} 
+.clearfix{ 
+    *zoom:1;/*IE/7/6*/
+}
+.fr{
+    float: right;
+}
+.fl{
+    float: left;
+}
+.titleBg{
+    background: #2d69ea;
+    color: #fff;
+}
+.iconColor{
+    color: #2D69EA;
+    font-size: 30px!important;
+    cursor: pointer;
+}
+.itemActive{
+    color: #2D69EA;
+    cursor: pointer;
+}
+.hide {
+    display: none;
+}
+// layout布局
+.el-header,.el-main{
+    padding:0!important;
+}
+// left菜单
+.el-row{
+    height:100%;
+    width:100%;
+}
+.el-col-12{
+    height:100%;
+    width: 100%!important;
+}
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+    width: 100%;
+    height: 100%;
+  }
+  .el-menu-item-group__title{
+      padding:0 0 0 40px!important;
+  }
+   
+            
