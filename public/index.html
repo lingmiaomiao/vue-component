@@ -81,22 +81,22 @@
    if(userName==="ie" && verinfo < "10"){
      console.log("ie");
      dialog()
-   }else if(userName === 'firefox' && verinfo <"21"){
+   }else if(userName === 'firefox' && verinfo <"38"){
     console.log("firefox");
     dialog()
-   }else if(userName === 'chrome' && verinfo <"35"){
+   }else if(userName === 'chrome' && verinfo <"55"){
     console.log("chrome");
     dialog()
-   }else if(userName ==='safari' && verinfo <"9"){
+   }else if(userName ==='safari' && verinfo <"10"){
     console.log("safari");
     dialog()
-   }else if(userName ==='opera' && verinfo <"15"){
+   }else if(userName ==='opera' && verinfo <"24"){
     console.log("opera");
     dialog()
    }
   
-   function dialog(){
-    document.write("<div style='position:fixed;top:0;left:0;right:0;bottom:0;z-index:100;width:100%;height:100%;padding-top:200px;background-color:#fff';><P style='font-size:30px;text-align:center;padding:0 100px;color:#EF6C00;'>对不起您的浏览器版本过低，浏览器不兼容，请下载最新谷歌浏览器！<br/><br/><span style='font-size:18px;margin-top:50px;color:blue;'>谷歌浏览器推荐下载地址:<br/><a  style='color:#343434;text-decoration:underline;color:blue' href='https://sm.myapp.com/original/Browser/68.0.3440.84_chrome_installer_x64.exe'>https://sm.myapp.com/original/Browser/68.0.3440.84_chrome_installer_x64.exe</ a></span></P></div>")
-   }
+function dialog(){
+  document.write("<div style='position:fixed;top:0;left:0;right:0;bottom:0;z-index:100;width:100%;height:100%;padding-top:200px;background-color:#fff';><P style='font-size:30px;text-align:center;padding:0 100px;color:#EF6C00;'>对不起您的浏览器版本过低，浏览器不兼容，请下载最新火狐浏览器！<br/><br/><span style='font-size:18px;margin-top:50px;color:blue;'>火狐浏览器推荐下载地址:<br/><a  style='color:#343434;text-decoration:underline;color:blue' href='https://download-ssl.firefox.com.cn/releases-sha2/stub/official/zh-CN/Firefox-latest.exe'>https://download-ssl.firefox.com.cn/releases-sha2/stub/official/zh-CN/Firefox-latest.exe</ a></span></P></div>")
+}
     </script>
 </html>

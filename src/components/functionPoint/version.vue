@@ -6,6 +6,8 @@
     <div>提示：将项目在线地址输入input框，但每天仅仅能校验一次</div>
     <div>检验的浏览器：IE,Chrom,Firefox,Safari,Opera</div>
     <div>基于vue2.0版本，及其安装的依赖综合圈定其版本</div>
+     <a href="https://www.cnblogs.com/devcjq/articles/3926722.html">https://www.cnblogs.com/devcjq/articles/3926722.html</a>
+     <div>账号：（QQ邮箱及密码）</div>
 </div>
 </template>
 <script>
