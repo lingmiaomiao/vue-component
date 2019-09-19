@@ -5,6 +5,7 @@ Vue.use(Router)
 // echarts
 import MapCom from './components/echarts/map'
 import LineCom from './components/echarts/line'
+import mapEchart from './components/echarts/map_echart'  //echart插件
 // websocket
 import SocketCom from './components/websocket/socket'
 // function point(功能点)
@@ -32,7 +33,12 @@ export default new Router({
           name:'line折线图',
           component:LineCom,
           hidden: false,
-       }] 
+       },{
+         path:'/echarts/map_echart',
+         name:'echart插件',
+         component:mapEchart,
+         hidden: false,
+      }] 
     },
     {
       path: '/',
