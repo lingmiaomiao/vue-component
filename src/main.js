@@ -24,7 +24,6 @@ Vue.use(Vuetify)
 //confirm
 import confirm from './public/confirm/confirm'
 Vue.prototype.$confirm = confirm;
-
 Vue.config.productionTip = false
 
 

@@ -10,13 +10,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but my-project doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
   </body>
   <script type="text/javascript">
+  // 2--浏览器版本
     var browser = getBrowserInfo() ;//浏览器信息
     //alert(browser);//IE 11.0
     //IE11以下： MSIE 10.0、MSIE9.0等
@@ -94,9 +91,8 @@
     console.log("opera");
     dialog()
    }
-  
-function dialog(){
-  document.write("<div style='position:fixed;top:0;left:0;right:0;bottom:0;z-index:100;width:100%;height:100%;padding-top:200px;background-color:#fff';><P style='font-size:30px;text-align:center;padding:0 100px;color:#EF6C00;'>对不起您的浏览器版本过低，浏览器不兼容，请下载最新火狐浏览器！<br/><br/><span style='font-size:18px;margin-top:50px;color:blue;'>火狐浏览器推荐下载地址:<br/><a  style='color:#343434;text-decoration:underline;color:blue' href='https://download-ssl.firefox.com.cn/releases-sha2/stub/official/zh-CN/Firefox-latest.exe'>https://download-ssl.firefox.com.cn/releases-sha2/stub/official/zh-CN/Firefox-latest.exe</ a></span></P></div>")
-}
+  function dialog(){
+    document.write("<div style='position:fixed;top:0;left:0;right:0;bottom:0;z-index:100;width:100%;height:100%;padding-top:200px;background-color:#fff';><P style='font-size:30px;text-align:center;padding:0 100px;color:#EF6C00;'>对不起您的浏览器版本过低，浏览器不兼容，请下载最新火狐浏览器！<br/><br/><span style='font-size:18px;margin-top:50px;color:blue;'>火狐浏览器推荐下载地址:<br/><a  style='color:#343434;text-decoration:underline;color:blue' href='https://download-ssl.firefox.com.cn/releases-sha2/stub/official/zh-CN/Firefox-latest.exe'>https://download-ssl.firefox.com.cn/releases-sha2/stub/official/zh-CN/Firefox-latest.exe</ a></span></P></div>")
+  }
     </script>
 </html>
