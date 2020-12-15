@@ -11,6 +11,7 @@ import SocketCom from './components/websocket/socket'
 // function point(功能点)
 import confirmsCom from './components/functionPoint/confirms'
 import versionCom from './components/functionPoint/version'
+import tableCheckCom from './components/functionPoint/tableCheck'
 
 
 export default new Router({
@@ -69,7 +70,12 @@ export default new Router({
           name:'浏览器版本校验',
           component:versionCom,
           hidden: false,
-       }] 
+       },{
+         path:'/functionPoint/tableCheck',
+         name:'网格勾选',
+         component:tableCheckCom,
+         hidden: false,
+      },] 
     }
   ]
 })
