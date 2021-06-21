@@ -12,7 +12,8 @@ import SocketCom from './components/websocket/socket'
 import confirmsCom from './components/functionPoint/confirms'
 import versionCom from './components/functionPoint/version'
 import tableCheckCom from './components/functionPoint/tableCheck'
-
+// cms-question
+import editModelADD from './cms_question/editModelADD'
 
 export default new Router({
   mode: 'history',
@@ -76,6 +77,13 @@ export default new Router({
          component:tableCheckCom,
          hidden: false,
       },] 
-    }
+    },
+    {
+      path: './cms_question/editModelADD',
+      name: 'cms_简单模板',
+      component:editModelADD,
+      hidden: false,
+      redirect:'./cms_question/editModelADD',
+    },
   ]
 })
