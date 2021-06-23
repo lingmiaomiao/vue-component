@@ -26,6 +26,11 @@ import confirm from './public/confirm/confirm'
 Vue.prototype.$confirm = confirm;
 Vue.config.productionTip = false
 
+// 引入的封装的过滤器
+import * as filters from './plugins/filters.js'
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
 
 new Vue({
   router,

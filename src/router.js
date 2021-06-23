@@ -76,7 +76,14 @@ export default new Router({
          name:'网格勾选',
          component:tableCheckCom,
          hidden: false,
-      },] 
+      },
+      {
+        path:'/functionPoint/function_event',
+        name:'网格勾选',
+        component:import('@/components/functionPoint/function_event'),
+        hidden: false,
+     },
+    ] 
     },
     {
       path: './cms_question/editModelADD',
