@@ -13,7 +13,7 @@ import confirmsCom from './components/functionPoint/confirms'
 import versionCom from './components/functionPoint/version'
 import tableCheckCom from './components/functionPoint/tableCheck'
 // cms-question
-import editModelADD from './cms_question/editModelADD'
+import editModelADD from './components/cms_question/editModel'
 
 export default new Router({
   mode: 'history',
@@ -77,20 +77,22 @@ export default new Router({
          component:tableCheckCom,
          hidden: false,
       },
-      {
-        path:'/functionPoint/function_event',
-        name:'网格勾选',
-        component:import('@/components/functionPoint/function_event'),
-        hidden: false,
-     },
     ] 
     },
     {
-      path: './cms_question/editModelADD',
+      path: '/',
       name: 'cms_简单模板',
-      component:editModelADD,
+      component:Home,
       hidden: false,
-      redirect:'./cms_question/editModelADD',
+      redirect:'/cms_question/editModel',
+      children:[
+        {
+          path:'/cms_question/editModel',
+          name:'考题模板',
+          component:editModelADD,
+          hidden: false,
+       },
+      ]
     },
   ]
 })

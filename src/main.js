@@ -21,6 +21,11 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 Vue.use(Vuetify)
 
+//引入iview
+import ViewUI from 'view-design';
+import 'view-design/dist/styles/iview.css';
+Vue.use(ViewUI);
+
 //confirm
 import confirm from './public/confirm/confirm'
 Vue.prototype.$confirm = confirm;

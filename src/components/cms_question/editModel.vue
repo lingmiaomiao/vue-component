@@ -65,7 +65,7 @@
 </div>
 </template>
 <script>
-import newQuestionCom from '/newQuestion'   //空白题型模板
+import newQuestionCom from '../cms_question/newQuestion'   //空白题型模板
 export default {
     name:'editModelADD',
     data(){
