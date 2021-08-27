@@ -229,6 +229,21 @@ export default {
       }
       return s.join(dec);
     },
+    //不知道小数点时判断是否相等
+    // num   变量
+    // num2  小数点后几位
+    point1(num,num2) {
+      num = num + '';
+      num2 = num2 + '';
+      let arr = num.split('');
+      let index = arr.indexOf('.');
+      let fixed1=arr.length - 1 - index;
+      let arr2 = num2.split('')
+      let index2 = arr2.indexOf('.')
+      let fixed2=arr2.length - 1 - index2;
+      const number=fixed1+fixed2
+      return ((Number(num)*Number('1e'+fixed1))*(Number(num2)*('1e'+fixed2)))/(Number('1e'+number))
+   }
     
   },
 };
